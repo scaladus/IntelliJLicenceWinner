@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="incrementalityType" value="SBT" />
+    <profile name="SBT 1" modules="intellijlicencewinner,sharedJVM" />
+    <profile name="SBT 2" modules="client,sharedJS">
+      <parameters>
+        <parameter value="-P:scalajs:mapSourceURI:file:/Users/mark/Documents/IntelliJLicenceWinner/-&gt;" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.11.6/jars/scalajs-compiler_2.11.6-0.6.5.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 3" modules="server">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="utf8" />
+      </parameters>
+    </profile>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+GET        /        controllers.Application.index()
+POST       /winner  controllers.Application.findWinner()
+
+# Assets
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
