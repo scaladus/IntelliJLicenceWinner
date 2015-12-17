@@ -1,6 +1,5 @@
 package io.plasmap
 
-import io.plasmap.components.MainComponent.PredictionProps
 import io.plasmap.components.MainComponent
 import japgolly.scalajs.react.{ReactDOM, React}
 import org.scalajs.dom.ext.Ajax
@@ -21,6 +20,6 @@ object App extends js.JSApp {
     val containerNode = byId("react-container")
 
     ReactDOM.render(
-      MainComponent.component, containerNode)
+      MainComponent.component("Winner winner winners"), containerNode)
   }
 }

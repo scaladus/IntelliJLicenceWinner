@@ -21,9 +21,9 @@ object FromServer {
     (CallbackTo future fut).void
   }
 
-  def findWinner(participants:List[Participant], callback: ((Map[String, String],String)) => Callback) = {
-    post(write[String], read[(Map[String, String],String)])(
-      "/getosmdata", id, callback
+  def findWinner(participants:List[Participant], callback: (Participant) => Callback):Callback = {
+    post(write[List[Participant]], read[Participant])(
+      "/winner", participants, callback
     )
   }
 

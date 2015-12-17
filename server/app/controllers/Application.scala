@@ -22,8 +22,15 @@ object Application extends Controller {
 
   def findWinner() = Action.async {
     request => Future {
-      request.body.asText.map(upickle.default.read[List[Participant]])
-      Ok("Meatball")
+      request
+        .body
+        .asText
+        .map(upickle.default.read[List[Participant]])
+        .map(ps => Rng.chooseint(0, ps.length-1).map(ps))
+        .map(_.run.unsafePerformIO())
+        .map(p => upickle.default.write[Participant](p))
+        .map(Ok(_))
+        .getOrElse(InternalServerError("Oh dear!"))
     }
   }
 }
