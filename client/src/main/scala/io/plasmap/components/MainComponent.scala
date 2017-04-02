@@ -15,29 +15,9 @@ object MainComponent {
 
   val component = ReactComponentB[Unit]("Winner Component")
     .initialState(State(List(
-      "Axel Poigné",
-      "Teresa Rütten",
-      "David",
-      "Roland Manfrahs",
-      "Endre Zonai",
-      "Dhia Abbassi",
-      "Oliver Lüttin",
-      "Ankur Srivastava",
-      "koenighotze",
-      "Kevin Shale",
-      "Michael S.",
-      "Mobe",
-      "Pawel M.",
-      "Luis Delgado Romera",
-      "Valentin Willscher",
-      "Robert Giacinto",
-      "Gunther Wittig",
-      "Torsten Schmidt",
-      "Matthias Rütten",
-      "Marius Soutier",
-      "Erna",
-      "Jan",
-      "Mark"
+      "",
+      "",
+      ""
     ).map(Participant), None))
     .render( $ => {
       $.state.winner.map( winner =>
